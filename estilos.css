@@ -1,0 +1,91 @@
+@font-face{
+	font-family: "BEBAS";
+	src: url("fonts/BebasNeue.otf") format("opentype");
+}
+
+body{
+	font: 16px "BEBAS", tahoma;
+	line-height: 1.8em;
+	color: #818181;
+	letter-spacing: 1px;	
+	margin: 0px;
+	padding: 0px;
+}
+
+header{
+	background-color: lightgray;
+	text-align: center;
+}
+
+nav{
+	height: auto;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+	text-align: left;
+	background-color: rgb(180,40,60);
+	width: 100%;
+}
+
+.navbar{
+	float: left;
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.navbar li{
+	float: left;
+
+}
+
+.navbar li a{
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.navbar li a:hover{
+	background-color: rgb(160,20,40);
+}
+
+.navbar li.activo a{
+	color: #FF8080;
+}
+
+.contenido{
+	margin: 0em 8em;
+	padding: 2em 0em;
+}
+
+.col1{
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.col2{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.msg{
+	visibility: hidden;
+}
+
+.error{
+	color: red;
+}
+
+footer{
+	background-color: rgb(180,40,60);
+	text-align: center;
+	font-size: 12px;
+	font-style: italic;
+	color: white;
+	margin: 0px;
+	padding: 15px 0px 15px 0px;
+}
