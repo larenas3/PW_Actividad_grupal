@@ -1,6 +1,5 @@
 function validarNombre(){
 	var nom = document.getElementById("nombre").value;
-  msg("validando nombre");
 	//Validar el campo "nombre"
 	if (nom == null || nom.length == 0 || /^\s+$/.test(nom)) {
 		$("#nombre").parent().attr("class","error");
