@@ -38,24 +38,18 @@
                     <p>Escríbanos, respondemos su solicitud de manera personalizada y en el menor tiempo.</p>
                 </div>
                 <div class="col2">
-                    <form method="post" action="#" onsubmit="return (validarNombre()&&validarCorreo()&&validarComentario())">
+                    <form method="" action="" onsubmit="return (validacion())">
                         <div>
                             <input id="nombre" name="nombre" placeholder="Nombre" type="text"></input>
-                            <span class="msg">
-                                Por favor escriba su nombre.
-                            </span>
+                            <span class="msg"></span>
                         </div>
                         <div>
                             <input id="correo" name="correo" placeholder="Correo electrónico" type="text"></input>
-                            <span class="msg">
-                                Por favor escriba un correo electónico valido.
-                            </span>
+                            <span class="msg"></span>
                         </div>
                         <div>
                             <textarea id="comentarios" name="comentarios" placeholder="Sus solicitudes o comentarios"></textarea><br>
-                            <span class="msg">
-                                Por favor escriba un correo electónico valido.
-                            </span>
+                            <span class="msg"></span>
                         </div>
                         <button id="btnEnvia" type="submit">ENVIAR</button>
                     </form>

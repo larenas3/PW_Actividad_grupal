@@ -73,10 +73,6 @@ nav{
 }
 
 .msg{
-	visibility: hidden;
-}
-
-.error{
 	color: red;
 }
 
@@ -88,4 +84,58 @@ footer{
 	color: white;
 	margin: 0px;
 	padding: 15px 0px 15px 0px;
+}
+
+.noticias{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+	border-radius: 20px;
+	border: 1px solid black;
+}
+
+.comentarios{
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+	border-radius: 20px;
+	border: 1px solid black;
+}
+
+.tituloPanel{
+	text-align: center;
+	color: white;
+	background-color: black;
+	border-radius: 19px 19px 0px 0px;
+}
+
+.nota{
+	margin: 0em 3em;
+	padding: 1em 0em;
+}
+
+.tituloNota{
+	border-top: 1px dashed black;
+	color: black;
+	margin: 0px;
+}
+
+.contenidoNota{
+	border-bottom: 1px dashed black;
+	margin: 0px;
+}
+
+.foto{
+	width: 20%;
+	display: inline-block;
+}
+
+.texto{
+	width: 75%;
+	display: inline-block;
+}
+
+.avatar{
+	width: 40px;
+	height: 40px;
 }
