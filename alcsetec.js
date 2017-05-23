@@ -14,7 +14,7 @@ function validarCorreo(){
 	var mail = document.getElementById("correo").value;
 	//Validar el campo "correo"
 	if( !(/\S+@\S+\.\S+/.test(mail)) ) {
-    document.getElementsByClassName("msg")[1].innerHTML="Por favor escriba su correo electrónico";
+    document.getElementsByClassName("msg")[1].innerHTML="Por favor escriba un correo electrónico válido";
     return false;
   }else{
     document.getElementsByClassName("msg")[1].innerHTML="";
@@ -49,8 +49,8 @@ function validacion(){
     texto = texto.concat("\nComentario");
     respuesta=false;
   }
-  if(!respuesta){
+  /*if(!respuesta){
     alert(texto);
-  }
+  }*/
   return respuesta;
 }
