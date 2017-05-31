@@ -64,7 +64,36 @@ h1{
 	color: rgb(240,35,85);
 }
 
+.navbar-corp{
+	float: right;
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.navbar-corp li{
+	float: right;
+
+}
+
+.navbar-corp li a{
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.navbar-corp li a:hover{
+	background-color: rgb(155,35,55);
+}
+
+.navbar-corp li.activo a{
+	color: rgb(240,35,85);
+}
+
 .contenido{
+	min-height: 400px;
 	margin: 0em 8em;
 	padding: 2em 0em;
 }
@@ -174,6 +203,7 @@ textarea{
 	height: 6em;
 }
 form{
+	margin: 8px;
 	padding: 0em 2em;
 	text-align: center;
 }
