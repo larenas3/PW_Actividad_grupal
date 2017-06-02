@@ -3,7 +3,7 @@ session_start();
     //Verificar si ya hay una sesión abierta
     if(isset($_SESSION['usuario'])){
         //Si la sesión esta abierta, se verifica que sea realmente un cliente
-        if(!$_SESSION['tipo']=="cliente"){
+        if($_SESSION['tipo']!="cliente"){
             header('Location: '.$_SESSION['tipo'].'.php');
             exit(0);
         }

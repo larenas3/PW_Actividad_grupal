@@ -15,24 +15,24 @@ include('inc/encabezado.php');
     <div id="mensaje"></div>
     <div class="comentarios">
         <div class="tituloPanel">Iniciar sesión</div>
-        <form method="POST" id="acceso" action="">
-            <input class="acceso" id="usuario" name="usuario" placeholder="Usuario" type="text">
-            <input class="acceso" id="pass" name="pass" placeholder="Contraseña" type="password">
-            <input class="btnEnviar" id="btnEnvia" type="submit" value="INGRESAR">
+        <form method="POST">
+            <input id="usuario" name="usuario" placeholder="Usuario" type="text" autofocus>
+            <input id="pass" name="pass" placeholder="Contraseña" type="password">
+            <input class="btnEnviar" id="ingresar" name="ingresar" type="button" value="INGRESAR">
+            <span id="resultado"></span>
         </form>
     </div>
     <br>
     <br>
     <div class="comentarios">
         <div class="tituloPanel">Registrarse</div>
-        <form method="POST" id="registro" action="">
-            <input class="registro" id="nombre" name="nombre" placeholder="Nombres y Apellidos" type="text">
-            <input class="registro" id="usuario" name="usuario" placeholder="Usuario" type="text">
-            <input class="registro" id="pass" name="pass" placeholder="Contraseña" type="password">
-            <input class="registro" id="email" name="email" placeholder="Correo electrónico" type="email">
-            <input class="registro" id="telefono" name="telefono" placeholder="Teléfono" type="tel">
-            <input class="btnEnviar" type="button" name="registrar" id="registrar" value="REGISTRAR">
-            <span id="resultado"></span>
+        <form method="POST">
+            <input id="nombre" name="nombre" placeholder="Nombres y Apellidos" type="text">
+            <input id="usuario" name="usuario" placeholder="Usuario" type="text">
+            <input id="pass" name="pass" placeholder="Contraseña" type="password">
+            <input id="email" name="email" placeholder="Correo electrónico" type="email">
+            <input id="telefono" name="telefono" placeholder="Teléfono" type="tel">
+            <input id="registrar" type="button" value="REGISTRAR">
         </form>
     </div>
 </div>

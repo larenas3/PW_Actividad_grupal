@@ -28,7 +28,8 @@
                 <li<?php if($pagina=="contacto"){ echo " class='activo'"; } ?>><a href="contacto.php">Contactenos</a></li>
             </ul>
             <ul class="navbar-corp">
-                <li<?php if($pagina=="login"){ echo " class='activo'"; } ?>><a href="login.php">Iniciar sesión</a></li>
+                <li<?php if(isset($_SESSION["usuario"])){ echo " hidden"; } ?>><a href="login.php">Iniciar sesión</a></li>
+                <li<?php if(!isset($_SESSION["usuario"])){ echo " hidden"; } ?>><a href="salir.php">Cerrar sesión</a></li>
             </ul>
         </nav>
     </header>
