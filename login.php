@@ -1,56 +1,42 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="estilos.css">
-    <title>ALCSETEC</title>
-</head>
-<body>
-    <!--Encabezado-->
-    <header>
-        <!--Logo y nombre de la empresa-->
-        <div>
-            <a href="index.html">
-                <img src="imagenes/logo.png" alt="ALCETEC - Comercializamos con pasión.">
-            </a>
-        </div>
-        <nav>
-            <!--Barra de Menú--> 
-            <ul class="navbar">
-                <li><a href="index.html">Incio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="contacto.html">Contactenos</a></li>
-            </ul>
-            <ul class="navbar-corp">
-                <li class="activo"><a href="login.php">Iniciar sesión</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!--contenido-->  
-    <div class="contenido" style="text-align: center;">
-        <div class="noticias">
-            <div class="tituloPanel">Ingreso al área administrativa</div>
-            <form method="post" action="#" onsubmit="return validacion()">
-                <div>
-                    <input id="usuario" name="usuario" placeholder="Usuario" type="text">
-                    <span class="msg"></span>
-                </div>
-                <div>
-                    <input id="pass" name="pass" placeholder="Contraseña" type="password">
-                    <span class="msg"></span>
-                </div>
-                <button class="btnEnviar" id="btnEnvia" type="submit">INGRESAR</button>
-            </form>
-        </div>
+<?php
+session_start();
+//Verificar si ya hay una sesión abierta
+if(isset($_SESSION['usuario'])){
+//Si la sesión esta abierta, cargar el sitio del respectivo usuario
+    header('Location: '.$_SESSION['tipo'].'.php');
+    exit(0);
+}
+
+$pagina = "login";
+include('inc/encabezado.php');
+?>
+<!--contenido-->  
+<div class="contenido" style="text-align: center;">
+    <div id="mensaje"></div>
+    <div class="comentarios">
+        <div class="tituloPanel">Iniciar sesión</div>
+        <form method="POST" id="acceso" action="">
+            <input class="acceso" id="usuario" name="usuario" placeholder="Usuario" type="text">
+            <input class="acceso" id="pass" name="pass" placeholder="Contraseña" type="password">
+            <input class="btnEnviar" id="btnEnvia" type="submit" value="INGRESAR">
+        </form>
+    </div>
+    <br>
+    <br>
+    <div class="comentarios">
+        <div class="tituloPanel">Registrarse</div>
+        <form method="POST" id="registro" action="">
+            <input class="registro" id="nombre" name="nombre" placeholder="Nombres y Apellidos" type="text">
+            <input class="registro" id="usuario" name="usuario" placeholder="Usuario" type="text">
+            <input class="registro" id="pass" name="pass" placeholder="Contraseña" type="password">
+            <input class="registro" id="email" name="email" placeholder="Correo electrónico" type="email">
+            <input class="registro" id="telefono" name="telefono" placeholder="Teléfono" type="tel">
+            <input class="btnEnviar" type="button" name="registrar" id="registrar" value="REGISTRAR">
+            <span id="resultado"></span>
+        </form>
     </div>
 </div>
-<!--Pie de página-->   
-<footer>
-    <div>
-        <p>ALCSETEC 2017</p>
-    </div>
-</footer>
-</body>
-</html>
+<!-- /contenido -->
+<?php
+include("inc/pie.php");
+?>
